@@ -30,21 +30,25 @@ public class BoxBugRunner
     public static void main(String[] args)
     {
         ActorWorld world = new ActorWorld();
+	int[] arr = {1, 2, 3, 4, 5};
         //BoxBug alice = new BoxBug(6);
         //alice.setColor(Color.ORANGE);
         //BoxBug bob = new BoxBug(3);
 	//bob.setColor(Color.GREEN);
 	//CircleBug cathy = new CircleBug(4);
 	//cathy.setColor(Color.PINK);
-	SpiralBug dave = new SpiralBug(1);
-	dave.setColor(Color.BLUE);
-	ZBug edward = new ZBug(4);
-	edward.setColor(Color.WHITE);
+	//SpiralBug dave = new SpiralBug(1);
+	//dave.setColor(Color.BLUE);
+	//ZBug edward = new ZBug(4);
+	//edward.setColor(Color.WHITE);
+	DancingBug felicia = new DancingBug(arr);
+	felicia.setColor(Color.YELLOW);
 	//world.add(new Location(7, 8), alice);
         //world.add(new Location(5, 5), bob);
 	//world.add(new Location(6, 3), cathy);
-        world.add(new Location(2, 4), dave);
-	world.add(new Location(0, 0), edward);
+        //world.add(new Location(2, 4), dave);
+	//world.add(new Location(0, 0), edward);
+	world.add(new Location(5, 5), felicia);
 	world.show();
     }
 }
