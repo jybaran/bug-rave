@@ -29,12 +29,23 @@ public class BoxBugRunner
 {
     public static void main(String[] args)
     {
+	
         ActorWorld world = new ActorWorld();
+	int[] a = new int[10];
+	int i = 9;
+        while(i > 0){
+	    a[i] = i;
+	    i --;
+	}
+	ZBug charlie = new ZBug(4);
+	DancingBug denny = new DancingBug(a);
         BoxBug alice = new BoxBug(6);
         alice.setColor(Color.ORANGE);
         BoxBug bob = new BoxBug(3);
         world.add(new Location(7, 8), alice);
         world.add(new Location(5, 5), bob);
+	world.add(new Location(0,0), charlie);
+	world.add(new Location(3,6), denny);
         world.show();
     }
 }
